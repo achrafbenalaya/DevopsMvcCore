@@ -35,8 +35,14 @@ steps:
 
 - task: VSTest@2
   inputs:
-    testSelector: 'testRun'
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
+    diagnosticsEnabled: true
+    collectDumpOn: 'always'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
