@@ -33,7 +33,7 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
+- task: UnitTest@3
   inputs:
     command : test
     projects: '**/*test/*.csproj'
