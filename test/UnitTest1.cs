@@ -18,7 +18,7 @@ namespace test
 
             int result = calculator.Add(4, 3);
 
-            Assert.AreEqual(7, result);
+            Assert.AreEqual(3, result);
         }
 
 
