@@ -28,12 +28,9 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
 
-- task: UnitTest@3
+
+- task: VSTest@2
   inputs:
     command : test
     projects: '**/*test/*.csproj'
