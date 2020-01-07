@@ -16,14 +16,26 @@ namespace test
 
             var calculator = new Calculator();
 
+            int result = calculator.Add(4, 4);
+            //achraf
+            Assert.AreEqual(8, result);
+        }
+
+
+        [Test]
+        public void Test2()
+        {
+            //Assert.Pass();
+
+            var calculator = new Calculator();
+
             int result = calculator.Add(4, 3);
             //achraf
-            Assert.AreEqual(3, result);
+            Assert.AreEqual(7, result);
         }
 
 
 
-   
 
     }
 }
